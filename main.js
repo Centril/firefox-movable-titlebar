@@ -85,3 +85,11 @@ const titlebarButtonsMagic = window => {
 		observer.disconnect();
 	}, window );
 }
+
+// Plugin entry point:
+const main = () => watchWindows( window => async( partial( titlebarButtonsMagic, window ) ) );
+
+main();
+
+// Clean up with unloaders when we're deactivating:
+require("sdk/system/unload").when( reason => unload() );
