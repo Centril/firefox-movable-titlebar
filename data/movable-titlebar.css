@@ -1,0 +1,111 @@
+/*
+ * Movable Titlebar Buttons, a Firefox Addon/Extension.
+ * Allows you to move the titlebar buttons on Windows 10.
+ *
+ * Copyright (C) 2015 Mazdak Farrokhzad <twingoow@gmail.com>, Mozilla Labs
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+@-moz-document url-prefix("chrome://browser/content/browser.xul") {
+	#main-window[movable-titlebar="true"] #titlebar {
+		margin-bottom: -30px !important;
+	}
+
+	#main-window[movable-titlebar="true"][sizemode="maximized"] #titlebar {
+		margin-bottom: -23px !important;
+	}
+
+	#main-window[movable-titlebar="true"] #titlebar-buttonbox,
+	#main-window[movable-titlebar="true"]:not([privatebrowsingmode])
+	#titlebar-placeholder-on-TabsToolbar-for-captions-buttons {
+		display:none;
+	}
+
+	#main-window[movable-titlebar="true"][privatebrowsingmode]
+	#titlebar-placeholder-on-TabsToolbar-for-captions-buttons {
+		max-width: 44px;
+	}
+}
+
+@-moz-document url-prefix("chrome://browser/content/browser.xul") {
+	#navigator-toolbox *[widget-id|="firefox-movable-titlebar"] {
+		padding:10px 17px !important;
+		padding-top: 9px !important;
+	}
+
+	#navigator-toolbox *[widget-id|="firefox-movable-titlebar"] >
+	.toolbarbutton-icon {
+		width:12px;
+		height:12px;
+		border:none;
+		padding:0 !important;
+		margin:0;
+
+		background:none !important;
+		border-color:transparent !important;
+		box-shadow:none !important;
+	}
+
+	#navigator-toolbox *[widget-id|="firefox-movable-titlebar"]:not(:hover) >
+	.toolbarbutton-icon:-moz-window-inactive {
+		opacity: 0.5;
+	}
+
+	*[widget-id|="firefox-movable-titlebar"] > .toolbarbutton-text,
+	*[widget-id|="firefox-movable-titlebar"] > .toolbarbutton-multiline-text {
+		display: none;
+	}
+
+	*[widget-id|="firefox-movable-titlebar"]:hover:active {
+		background-color: hsla(0, 0%, 0%, .22) !important;
+	}
+	*[widget-id|="firefox-movable-titlebar"]:hover {
+		background-color: hsla(0, 0%, 0%, .12) !important;
+	}
+	#firefox-movable-titlebar-close:hover:active {
+		background-color: hsl(355, 82%, 69%) !important;
+	}
+	#firefox-movable-titlebar-close:hover {
+		background-color: hsl(355, 86%, 49%) !important;
+	}
+
+	/* Icons: */
+	#firefox-movable-titlebar-min .toolbarbutton-icon {
+		list-style-image: url('chrome://browser/skin/caption-buttons.svg#minimize');
+	}
+	#firefox-movable-titlebar-max .toolbarbutton-icon {
+		list-style-image: url('chrome://browser/skin/caption-buttons.svg#maximize');
+	}
+	#main-window[sizemode="maximized"] #firefox-movable-titlebar-max .toolbarbutton-icon {
+		list-style-image: url('chrome://browser/skin/caption-buttons.svg#restore');
+	}
+	#firefox-movable-titlebar-close .toolbarbutton-icon {
+		list-style-image: url('chrome://browser/skin/caption-buttons.svg#close');
+	}
+
+	/* If in toolbar[brighttext], use white versions: */
+	toolbar[brighttext] #firefox-movable-titlebar-min .toolbarbutton-icon {
+		list-style-image: url('chrome://browser/skin/caption-buttons.svg#minimize-white');
+	}
+	toolbar[brighttext] #firefox-movable-titlebar-max .toolbarbutton-icon {
+		list-style-image: url('chrome://browser/skin/caption-buttons.svg#maximize-white');
+	}
+	#main-window[sizemode="maximized"] toolbar[brighttext]
+	#firefox-movable-titlebar-max .toolbarbutton-icon {
+		list-style-image: url('chrome://browser/skin/caption-buttons.svg#restore-white');
+	}
+	toolbar[brighttext] #firefox-movable-titlebar-close .toolbarbutton-icon {
+		list-style-image: url('chrome://browser/skin/caption-buttons.svg#close-white');
+	}
+}
