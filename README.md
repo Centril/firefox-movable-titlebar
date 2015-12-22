@@ -2,7 +2,7 @@
 
 [![License]][url: License] [![Semver]][url: Semver] [![Gittip]][url: Gittip] [![Download]][url: Download]
 
-> Movable Titlebar Buttons, Firefox Addon, allows you to move the titlebar buttons on Windows 10.
+> Movable Titlebar Buttons, Firefox Addon, allows you to move the titlebar buttons on Windows 10 (only).
 
 ## Screenshots
 
@@ -28,7 +28,7 @@ This is highly recommended as it creates a super minimalistic experience.
 
 + `Firefox 38+`
 
-### [From AMO (Mozilla Addons)](https://addons.mozilla.org/en-US/firefox/addon/firefox-movable-titlebar-1/)
+### [From AMO (Mozilla Addons)](https://addons.mozilla.org/en-US/firefox/addon/movable-titlebar-buttons/)
 
 Note: Not yet signed, pre-release!
 
@@ -90,9 +90,9 @@ Want to contribute? Great stuff! Please use the issue system that github provide
 [Semver]: http://img.shields.io/badge/semver-2.0.0-blue.svg?style=flat
 [url: Semver]: http://semver.org/spec/v2.0.0.html
 [Download]: https://img.shields.io/badge/Download_XPI-1.0.0--pre-ff69b4.svg?style=flat
-[url: Download]: https://github.com/Centril/firefox-movable-titlebar/releases/tag/1.0.0-pre
+[url: Download]: https://github.com/Centril/firefox-movable-titlebar/releases/tag/1.0.1-pre
 
-[Logo]: https://raw.githubusercontent.com/Centril/firefox-movable-titlebar/implement/icon.png
+[Logo]: https://raw.githubusercontent.com/Centril/firefox-movable-titlebar/master/icon.png
 [Movable Titlebar Buttons, Firefox Addon]: https://github.com/Centril/firefox-movable-titlebar
 [Line, Firefox Addon]: https://github.com/Centril/firefox-line
 
