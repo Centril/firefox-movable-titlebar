@@ -38,28 +38,23 @@ const addButton = action => CUI.createWidget( {
 const destroyButton = widget => CUI.destroyWidget( widget.id );
 
 // Apply to each window as they come:
-watchFeature( WindowFeature.extend( {
-	/**
-	 * Applies modifications to window.
-	 */
-	apply() {
-		// Apply movable-titlebar.css:
-		const style = this.style( './movable-titlebar.css' );
+watchFeature( WindowFeature.extend( { apply() {
+	// Apply movable-titlebar.css:
+	const style = this.style( './movable-titlebar.css' );
 
-		// Hide the originals:
-		const root = this.doc.documentElement;
-		root.setAttribute( 'movable-titlebar', true );
+	// Hide the originals:
+	const root = this.doc.documentElement;
+	root.setAttribute( 'movable-titlebar', true );
 
-		// Clean up various changes when the add-on unloads:
-		unloader( () => {
-			// Restore originals:
-			root.removeAttribute( 'movable-titlebar' );
+	// Clean up various changes when the add-on unloads:
+	unloader( () => {
+		// Restore originals:
+		root.removeAttribute( 'movable-titlebar' );
 
-			// Remove our style:
-			this.detach( style );
-		} );
-	}
-} ) );
+		// Remove our style:
+		this.detach( style );
+	} );
+} } ) );
 
 // Create new buttons & unload them when needed:
 const R = ID.replacement;
