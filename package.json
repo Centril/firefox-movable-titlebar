@@ -1,12 +1,14 @@
 {
+	"main": "src/main.js",
 	"title": "Movable Titlebar Buttons",
 	"name": "firefox-movable-titlebar",
 	"version": "0.0.1",
 	"description": "Movable Titlebar Buttons allows you to move the titlebar buttons on Windows 10.",
-	"main": "main.js",
-	"author": "Mazdak Farrokhzad",
-	"engines": {
-		"firefox": ">=38.0a1"
-	},
-	"license": "GPL2"
+	"keywords": ["firefox", "addon", "line", "oneliner", "chrome", "modification"],
+	"homepage": "http://centril.github.io/firefox-movable-titlebar",
+	"bugs": "https://github.com/Centril/firefox-movable-titlebar/issues",
+	"author": "Mazdak Farrokhzad <twingoow@gmail.com>",
+	"license": "GPL-2.0+",
+	"engines": { "firefox": ">=38.0a1" },
+	"permissions": {"private-browsing": true, "multiprocess": true}
 }
