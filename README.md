@@ -89,7 +89,7 @@ Want to contribute? Great stuff! Please use the issue system that github provide
 [url: License]: LICENSE.md
 [Semver]: http://img.shields.io/badge/semver-2.0.0-blue.svg?style=flat
 [url: Semver]: http://semver.org/spec/v2.0.0.html
-[Download]: https://img.shields.io/badge/Download_XPI-1.0.0--pre-ff69b4.svg?style=flat
+[Download]: https://img.shields.io/badge/Download_XPI-1.0.1--pre-ff69b4.svg?style=flat
 [url: Download]: https://github.com/Centril/firefox-movable-titlebar/releases/tag/1.0.1-pre
 
 [Logo]: https://raw.githubusercontent.com/Centril/firefox-movable-titlebar/master/icon.png
